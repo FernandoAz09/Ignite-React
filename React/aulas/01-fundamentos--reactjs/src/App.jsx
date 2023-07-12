@@ -1,11 +1,19 @@
+import { Header } from "./components/Header"
 import { Post } from "./Post"
+
+import "./global.css"
 
 export function App() {
   return (
     <>
+    <Header />
       <Post
-        autor="Fernando Azevedo"
+        author="Fernando Azevedo"
         content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus ad adipisci a saepe cumque aliquid odio suscipit libero quo odit totam autem animi quisquam cum, sed quidem explicabo rem aliquam."
+      />
+      <Post
+        author="Scarlet Fernandes"
+        content="Verdade!"
       />
     </>
   )
