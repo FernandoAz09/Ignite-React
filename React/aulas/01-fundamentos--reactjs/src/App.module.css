@@ -7,3 +7,14 @@
     gap: 2rem;
     align-items: flex-start;
 }
+
+/* APLICANDO RESPONSIVIDADE (Uso de % para que permaneça responsivo)*/
+@media(max-width:768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
