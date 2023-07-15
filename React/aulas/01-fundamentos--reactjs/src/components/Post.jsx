@@ -37,7 +37,7 @@ export function Post({ author, publishedAt, content }) {
                     if (line.type === 'paragraph') {
                         return <p>{line.content}</p>
                     }else if (line.type === 'link') {
-                        return <p><a href="">{line.content}</a></p>
+                        return <p><a href="#">{line.content}</a></p>
                     }
                 })}
 
