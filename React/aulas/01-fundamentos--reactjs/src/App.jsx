@@ -1,9 +1,44 @@
+/* eslint-disable react/jsx-key */
 import { Header } from "./components/Header"
 import { Post } from "./components/Post"
 import { Sidebar } from "./components/Sidebar"
 
 import styles from "./App.module.css"
 import "./global.css"
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/Fernandoaz09.png',
+      name: 'Fernando Azevedo',
+      role: 'Front-End Developer'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋', },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no Ignite, da Rocketseat. O nome do projeto é Ignite Feed 🚀', },
+      { type: 'link', content: 'fernandoAz.frontDev/IgniteFeed', },
+    ],
+    publishedAt: new Date('2023-07-15 10:10:00')
+
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: 'https://github.com/luizAzevedo.png',
+      name: 'Luiz Azevedo',
+      role: 'Senior FullStack Developer'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋', },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no Ignite, da Rocketseat. O nome do projeto é DoctorCare 🚀', },
+      { type: 'link', content: 'fernandoAz.frontDev/doctorcare', },
+    ],
+    publishedAt: new Date('2023-07-13 13:00:00')
+
+  },
+
+]
 
 export function App() {
   return (
@@ -13,14 +48,17 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          <Post
-            author="Fernando Azevedo"
-            content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus ad adipisci a saepe cumque aliquid odio suscipit libero quo odit totam autem animi quisquam cum, sed quidem explicabo rem aliquam."
-          />
-          <Post
-            author="Scarlet Fernandes"
-            content="Verdade!"
-          />
+          {posts.map(post => {
+            return (
+            <Post 
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishedAt}
+            />
+            )
+          })
+          }
+
         </main>
       </div>
     </div>
