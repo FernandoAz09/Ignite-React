@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+
 import { Header } from "./components/Header"
 import { Post } from "./components/Post"
 import { Sidebar } from "./components/Sidebar"
@@ -50,15 +50,14 @@ export function App() {
         <main>
           {posts.map(post => {
             return (
-            <Post 
-              author={post.author}
-              content={post.content}
-              publishedAt={post.publishedAt}
-            />
+              <Post
+                key={post.id}
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
             )
-          })
-          }
-
+          })}
         </main>
       </div>
     </div>

@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+
 import { format, formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { useState } from 'react'
@@ -31,9 +31,9 @@ export function Post({ author, publishedAt, content }) {
         setNewCommentText('')
     }
 
-function handleNewCommentChange() {
-    setNewCommentText(event.target.value)
-}
+    function handleNewCommentChange() {
+        setNewCommentText(event.target.value)
+    }
 
     return (
         <article className={styles.post}>
@@ -53,9 +53,9 @@ function handleNewCommentChange() {
 
                 {content.map(line => {
                     if (line.type === 'paragraph') {
-                        return <p>{line.content}</p>
+                        return <p key={line.content}>{line.content}</p>
                     } else if (line.type === 'link') {
-                        return <p><a href="#">{line.content}</a></p>
+                        return <p key={line.content}><a href="#">{line.content}</a></p>
                     }
                 })}
 
@@ -83,7 +83,7 @@ function handleNewCommentChange() {
 
             <div className={styles.commentList}>
                 {comments.map(comment => {
-                    return <Comment content={comment} />
+                    return <Comment key={comment} content={comment} />
                 })}
             </div>
         </article>
