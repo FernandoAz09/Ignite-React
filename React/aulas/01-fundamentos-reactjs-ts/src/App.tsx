@@ -21,23 +21,7 @@ const posts: PostType[] = [
     ],
     publishedAt: new Date('2023-07-15 10:10:00')
 
-  },
-  {
-    id: 2,
-    author: {
-      avatarUrl: 'https://github.com/luizAzevedo.png',
-      name: 'Luiz Azevedo',
-      role: 'Senior FullStack Developer'
-    },
-    content: [
-      { type: 'paragraph', content: 'Fala galeraa 👋', },
-      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no Ignite, da Rocketseat. O nome do projeto é DoctorCare 🚀', },
-      { type: 'link', content: 'fernandoAz.frontDev/doctorcare', },
-    ],
-    publishedAt: new Date('2023-07-13 13:00:00')
-
-  },
-
+  }
 ]
 
 export function App() {
