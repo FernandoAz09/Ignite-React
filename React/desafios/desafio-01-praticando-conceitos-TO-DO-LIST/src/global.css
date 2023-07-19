@@ -23,7 +23,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: var(--gray-600);
     color: var(--gray-300);
