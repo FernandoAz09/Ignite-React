@@ -3,7 +3,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 
 .noTasks {
@@ -11,7 +10,7 @@
     border-top: 1px solid var(--gray-400);
     border-radius: 8px;
     height: 244px;
-    display: flex;  
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -25,4 +24,38 @@
 .noTasks strong {
     margin-top: 1rem;
     line-height: 1.6;
+}
+
+.tasksWrapper div {
+    width: 100%;
+}
+
+.tasksWrapper .task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+
+    background-color: var(--gray-500);
+    border:1px solid var(--gray-400);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+
+.task input {
+    appearance: none;
+    border: 2px solid var(--blue);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    min-width: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.task input[checked="true"] {
+    border-color: var(--purple);
+    background: url(../assets/Checked.png) no-repeat center center var(--purple);
 }
