@@ -1,2 +1,2 @@
 # Ignite-React
-Repositório para o curso Ignite da Rocketseat
+Repositório para o curso Ignite da Rocketseat.
