@@ -51,3 +51,38 @@
     justify-content: space-between;
 }
 
+.taskContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto 0;
+    padding: 0 1rem;
+    max-width: 46rem;
+}
+
+.taskContainer header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.taskContainer header .createdTasks {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.taskContainer header .tasksCompleted span,
+.taskContainer header .createdTasks span {
+    color: var(--gray-100);
+    background-color: var(--gray-400);
+    border-radius: 16px;
+    padding: 2px 10px;
+    font-weight: bold;
+}
+
+.taskContainer header .tasksCompleted {
+    color: var(--purple);
+    font-weight: bold;
+}

@@ -1,0 +1,28 @@
+.tasksWrapper {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.noTasks {
+    width: 100%;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+    height: 244px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.taskIcon {
+    display: flex;
+    justify-content: center;
+}
+
+.noTasks strong {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
