@@ -29,6 +29,7 @@
 .tasksWrapper .task {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     gap: 12px;
@@ -54,4 +55,10 @@
 .task input[checked="true"] {
     border-color: var(--purple);
     background: url(../assets/Checked.png) no-repeat center center var(--purple);
+}
+
+.task .deleteButton {
+    background: none;
+    border: none;
+    color: var(--gray-300);
 }
