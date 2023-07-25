@@ -35,7 +35,7 @@
     gap: 12px;
 
     background-color: var(--gray-500);
-    border:1px solid var(--gray-400);
+    border: 1px solid var(--gray-400);
     border-radius: 8px;
     padding: 1rem;
 }
@@ -61,4 +61,10 @@
     background: none;
     border: none;
     color: var(--gray-300);
+    transition: color .3s ease-in-out, filter .3s ease-in-out;
+}
+
+.task .deleteButton:hover {
+    color: var(--danger);
+    filter: drop-shadow(0px 0px 4px var(--danger));;
 }

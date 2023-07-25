@@ -48,12 +48,18 @@
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.1s;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    transition: box-shadow .3s ease-in-out;
 }
+
+.taskForm button[type="submit"]:hover {
+    box-shadow: 0 0 10px var(--blue-dark);
+}
+
+
 
 .taskContainer {
     display: flex;
