@@ -26,10 +26,6 @@
     line-height: 1.6;
 }
 
-.tasksWrapper div {
-    width: 100%;
-}
-
 .tasksWrapper .task {
     display: flex;
     flex-direction: row;

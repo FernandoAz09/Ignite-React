@@ -13,7 +13,9 @@ export function App() {
       <div className={styles.wrapper}>
         <form className={styles.taskForm}>
           <textarea placeholder="Adicione uma nova tarefa"></textarea>
-          <button type="submit">Criar <PlusCircle className={styles.plusIcon} size={20} /></button>
+          <button type="submit" title="Criar tarefa">
+            Criar <PlusCircle className={styles.plusIcon} size={20} />
+          </button>
         </form>
       </div>
 
@@ -26,11 +28,8 @@ export function App() {
             Concluídas <span>0</span>
           </div>
         </header>
-
         <Task />
-
       </div>
-
     </>
   )
 }

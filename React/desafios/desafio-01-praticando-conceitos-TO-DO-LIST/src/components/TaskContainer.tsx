@@ -15,7 +15,9 @@ export function Task() {
                 <div className={styles.task}>
                     <input type="checkbox" />
                     <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                    <Trash size={20} />
+                    <button title="Deletar tarefa">
+                        <Trash size={20} />
+                    </button>
                 </div>
             </div>
         </div>

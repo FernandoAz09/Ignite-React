@@ -32,6 +32,10 @@
     padding: 1rem;
 }
 
+.taskForm textarea::placeholder {
+    color: var(--gray-300);
+}
+
 .taskForm button[type="submit"] {
     padding: 1rem;
     height: 3.375rem;
