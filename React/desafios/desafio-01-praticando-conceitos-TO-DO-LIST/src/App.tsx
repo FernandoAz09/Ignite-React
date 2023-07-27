@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Header } from "./components/Header"
 import { TasksContainer } from "./components/TasksContainer"
 export interface MyTask {
@@ -8,18 +8,7 @@ export interface MyTask {
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<MyTask[]>([
-    // {
-    //   id: 'teste',
-    //   title: 'teste',
-    //   isCompleted: true
-    // },
-    // {
-    //   id: 'asdas',
-    //   title: 'teste 2',
-    //   isCompleted: false
-    // },
-  ])
+  const [tasks, setTasks] = useState<MyTask[]>([])
 
   function addTask(taskTitle: string) {
     setTasks([

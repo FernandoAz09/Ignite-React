@@ -31,12 +31,15 @@
     border: 1px solid var(--gray-700);
     border-radius: 0.5rem;
     padding: 1rem;
+    outline: none;
 }
 
 .newTaskForm input::placeholder {
     color: var(--gray-300);
 }
-
+.newTaskForm input:focus {
+	border: 1px solid var(--blue-dark);
+}
 .newTaskForm button {
     height: 100%;
     padding: 0 1rem;
