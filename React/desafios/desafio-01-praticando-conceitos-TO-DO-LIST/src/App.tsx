@@ -32,10 +32,15 @@ export function App() {
     ])
   }
 
+function deleteTask(taskId: string) {
+  const newTasks = tasks.filter((task) => task.id !== taskId)
+  setTasks(newTasks)
+}
+
   return (
     <>
       <Header onAddTask={addTask}/>
-      <TasksContainer tasks={tasks} />
+      <TasksContainer tasks={tasks} onDelete={deleteTask}/>
     </>
   )
 }

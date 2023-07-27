@@ -12,8 +12,10 @@ export function Header({ onAddTask }: Props) {
 
     function handleSubmit(event: FormEvent) {
         event.preventDefault()
-
-        onAddTask(title)
+        if (title.length > 0 && title.trim() !== '') {
+            onAddTask(title)
+            setTitle('')
+        }
         setTitle('')
     }
     function onChangeTitle(event: ChangeEvent<HTMLInputElement>) {
@@ -29,6 +31,7 @@ export function Header({ onAddTask }: Props) {
                     placeholder="Adicione uma nova tarefa"
                     onChange={onChangeTitle}
                     value={title}
+                    required
                 />
                 <button type="submit" title="Criar tarefa">
                     Criar <PlusCircle className={styles.plusIcon} size={20} />

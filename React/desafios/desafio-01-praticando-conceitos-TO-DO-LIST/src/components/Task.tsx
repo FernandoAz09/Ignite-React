@@ -4,10 +4,11 @@ import styles from './Task.module.css'
 import { MyTask } from '../App'
 
 interface Props {
-    task:MyTask
+    task: MyTask
+    onDelete: (taskId: string) => void
 }
 
-export function Task({ task }: Props) {
+export function Task({ task, onDelete }: Props) {
     return (
         <div className={styles.task}>
             <button className={styles.checkContainer}>
@@ -15,7 +16,12 @@ export function Task({ task }: Props) {
                 </div>
             </button>
             <p>{task.title}</p>
-            <button title="Deletar tarefa" className={styles.deleteButton}><Trash size={20} /></button>
+            <button
+                title="Deletar tarefa"
+                className={styles.deleteButton}
+                onClick={() => onDelete(task.id)}>
+                <Trash size={20} />
+            </button>
         </div>
     )
 }
