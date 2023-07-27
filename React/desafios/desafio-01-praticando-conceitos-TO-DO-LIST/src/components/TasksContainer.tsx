@@ -1,13 +1,16 @@
+import { ClipboardText } from '@phosphor-icons/react'
 import { MyTask } from '../App'
 import { Task } from './Task'
+
 import styles from './TasksContainer.module.css'
 
 interface Props {
     tasks: MyTask[]
     onDelete: (taskId: string) => void
+    onComplete: (taskId: string) => void
 }
 
-export function TasksContainer({ tasks, onDelete }: Props) {
+export function TasksContainer({ tasks, onDelete, onComplete }: Props) {
     const tasksQuantity = tasks.length
     const completedTasks = tasks.filter(task => task.isCompleted).length
 
@@ -25,9 +28,18 @@ export function TasksContainer({ tasks, onDelete }: Props) {
             </header>
 
             <div className={styles.list}>
-                { tasks.map((task) => (
-                <Task key={task.id} task={task} onDelete={onDelete}/>
+                {tasks.map((task) => (
+                    <Task
+                        key={task.id}
+                        task={task}
+                        onDelete={onDelete}
+                        onComplete={onComplete}
+                    />
                 ))}
+
+
+
+                
             </div>
         </section>
 

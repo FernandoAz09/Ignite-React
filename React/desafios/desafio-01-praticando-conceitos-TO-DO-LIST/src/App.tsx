@@ -9,16 +9,16 @@ export interface MyTask {
 
 export function App() {
   const [tasks, setTasks] = useState<MyTask[]>([
-    {
-      id: 'teste',
-      title: 'teste',
-      isCompleted: true
-    },
-    {
-      id: 'asdas',
-      title: 'teste 2',
-      isCompleted: false
-    },
+    // {
+    //   id: 'teste',
+    //   title: 'teste',
+    //   isCompleted: true
+    // },
+    // {
+    //   id: 'asdas',
+    //   title: 'teste 2',
+    //   isCompleted: false
+    // },
   ])
 
   function addTask(taskTitle: string) {
@@ -32,15 +32,31 @@ export function App() {
     ])
   }
 
-function deleteTask(taskId: string) {
-  const newTasks = tasks.filter((task) => task.id !== taskId)
-  setTasks(newTasks)
-}
+  function deleteTask(taskId: string) {
+    const newTasks = tasks.filter((task) => task.id !== taskId)
+    setTasks(newTasks)
+  }
 
+  function toggleTask(taskId: string) {
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          isCompleted: !task.isCompleted
+        }
+      }
+      return task
+    })
+    setTasks(newTasks)
+  }
   return (
     <>
-      <Header onAddTask={addTask}/>
-      <TasksContainer tasks={tasks} onDelete={deleteTask}/>
+      <Header onAddTask={addTask} />
+      <TasksContainer
+        tasks={tasks}
+        onDelete={deleteTask}
+        onComplete={toggleTask}
+      />
     </>
   )
 }
