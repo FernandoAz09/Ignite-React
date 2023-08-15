@@ -30,6 +30,7 @@ interface Cycle {
   minutesAmount: number
 }
 
+
 export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null)
